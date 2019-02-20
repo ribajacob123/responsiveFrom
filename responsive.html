@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Responsive form
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }   
+
+        input[type=text], select, textarea 
+        {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: vertical;
+        }
+
+        input[type=date], select, textarea 
+        {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: vertical;
+        }
+
+        label 
+        {
+            padding: 12px 12px 12px 0;
+            display: inline-block;
+        }
+
+        input[type=submit] 
+        {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            float: right;
+        }
+
+        input[type=submit]:hover 
+        {
+            background-color: #45a049;
+        }
+
+        .container 
+        {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            margin-left: 10%;
+            margin-right: 10%;
+            padding: 20px;
+        }
+
+        .col1 
+        {
+            float: left;
+            width: 30%;
+            margin-top: 7px;
+            padding-left: 2%;
+        }
+
+        .col2 
+        {
+            float: left;
+            width: 65%;
+            margin-top: 7px;  
+        }
+
+        .row:after 
+        {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .head
+        {
+        color: whitesmoke
+        }
+
+
+        /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 600px) 
+        {
+            .container
+            {
+                margin:3%;
+            }
+
+            .col-25, .col-75, input[type=submit] 
+            {
+                width: 100%;
+                margin-top: 0;
+            }
+        }
+
+    </style>
+</head>
+
+<body style="background-color:rgba(119, 0, 0, 0.733)">
+
+    <div>
+        <h1 class = "head" ><center><b>Model engineering College</b></center></h1>
+        <h4 class = "head"  ><center>Semester Registration Form -B.Tech</center></h4>
+    </div>
+
+    <div class="container">
+    <form id="forms" name="form1">
+        <div class="row" style="padding-top: 30px;">
+            <div class="col1">
+                <label for="name"><b>Name of the student </b></label> 
+            </div>
+            <div class="col2">
+                <input type ="text" name ="fullname">
+            </div>
+        </div>
+
+        <br>
+
+        <div class="row">
+            <div class="col1">
+                <label><b>Admission No. </b></label>
+            </div>
+            <div class="col2">
+            <input type ="text" name="admno">
+            </div>
+        </div>
+
+        <br>
+
+        <div class="row">
+            <div class="col1">
+                <label><b>Class roll No. </b></label>
+            </div>
+            <div class="col2">
+                <input type="text" name="rollno">
+            </div>
+        </div>
+
+        <br>
+
+        
+        <div class="row">
+            <div class="col1">
+                <label><b>Branch </b></label>
+            </div>
+            <div class="col2">
+                <select id="branch" name="branch">
+                    <option value=" "></option>
+                    <option value="CS">CS</option>
+                    <option value="EC">EC</option>
+                    <option value="EE">EE</option>
+                    <option value="EB">EB</option>
+                </select>
+            </div>
+        </div>
+
+        <br>
+
+        
+        <div class="row">
+            <div class="col1">
+                <label><b>Batch </b></label>
+            </div>
+            <div class="col2">
+                <select id="batch" name="batch">
+                    <option value=" "></option>
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                </select>
+            </div>
+        </div>
+
+        <br>
+        
+
+        <div class="row">
+            <div class="col1">
+                <label><b>Semester to which Registration is sought for </b></label>
+            </div>
+            <div class="col2">
+                <select name="sem" id="sem">
+                    <option value=" "></option>
+                    <option value="2">2</option>
+                    <option value="4">4</option>
+                    <option value="6">6</option>
+                    <option value="8">8</option>
+                </select>
+            </div>
+        </div>
+
+        <br>
+        
+        <div class="row">
+            <div class="col1">
+                <label for=""><b>Category </b></label>
+            </div>
+            <div class="col2">
+                <select name="category" id="category">
+                    <option value=" "></option>
+                    <option value="merit">MERIT</option>
+                    <option value="management">MANAGEMENT</option>
+                    <option value="nri">NRI</option>
+                    <option value="feewaiver">FEE WAIVER SCHEME</option>
+                </select>
+            </div>
+        </div>
+
+        <br>
+
+
+        <div class="row">
+            <div class="col1">
+                <label for=""><b>Total Credits earned </b></label>
+            </div>
+            <div class="col2">
+                <input type="text">
+            </div>
+        </div>
+
+        <br>
+
+        
+        <div class="row">
+            <div class="col1">
+                <label for=""><b>Date  </b></label>
+            </div>
+            <div class="col2">
+                <input type="date">
+            </div>
+        </div>
+
+
+        <br>
+
+        <div class="row">
+            <div class="col1">
+                <label for=""><b>Hosteler ?  </b></label></div>
+            <div class="col2">
+                <label for="yes">Yes</label>
+                <input type="radio" name="hosteller" id="hosteller" value="yes">
+                <label for="no">No</label>
+                <input type="radio" name="hosteller" id="hosteller" value="no">
+            </div>
+        </div>
+
+        <br>
+        
+        <div class="row">
+            <div class="col1">
+                <label for=""><b>Whether belong to SC/ST </b></label>
+            </div>
+            <div class="col2">
+                <select name="scst" id="scst">
+                    <option value=" "></option>
+                    <option value="yes">YES</option>
+                    <option value="no">NO</option>
+                </select>
+            </div>
+        </div>
+
+
+        <br>
+
+        
+        <div class="row">
+            <div class="col1">
+                <label for=""><b>Present Address  </b></label>
+            </div>
+            <div class="col2">
+                <input type="text">
+            </div>
+        </div>
+
+        <br>
+        
+        <div class="row">
+            <div class="col1">
+                <label for=""><b>Phone No.  </b></label>
+            </div>
+            <div class="col2">
+                <input type="text">
+            </div>
+        </div>
+        <br><br><br>
+        <input type="submit" value="Submit" name="button" id="button"onclick="submit()">
+    </form>
+    </div>
+
+
+    <script>
+            var jsonObject={};
+            function submit(){
+              var url ='https://jsonplaceholder.typicode.com/posts';
+              console.log("button clicked");
+              for(i=0;i<13;i++)
+              {
+                var index=document.forms["form1"][i].name;
+                var val=document.forms["form1"][i].value;
+                jsonObject[index]=val;
+              }
+          
+                  fetch(url, {
+            method: 'POST', 
+            body: JSON.stringify(jsonObject), 
+            headers:{
+              'Content-Type': 'application/json'
+          }
+          }).then(res => res.json())
+          .then(response => alert( JSON.stringify(response)))
+          .catch(error => console.error('Error:', error));
+          
+          
+          }
+    </script>
+</body>
+</html>
